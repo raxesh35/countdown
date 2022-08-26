@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown times App</title>
+</head>
+<body onload="randomImage()">
+    <div class="container">
+        <h1 class="countdown" id="countdown" style="color: orange;"></h1>
+    </div>
+    <div class="timer">
+        <div class="countdown-container">
+            <div class="time day">100</div>
+            <span class="text">Days</span>
+        </div>
+        <div class="countdown-container">
+            <div class="time hour">100</div>
+            <span class="text">Hours</span>
+        </div>
+        <div class="countdown-container">
+            <div class="time minute">100</div>
+            <span class="text">Minutes</span>
+        </div>
+        <div class="countdown-container">
+            <div class="time seconds">100</div>
+            <span class="text">Seconds</span>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="snowstorm.js"></script>
+    <script type="text/javascript">
+        var totalCount = 8;
+        function randomImage()
+        {
+        //var num = Math.ceil( Math.random() * totalCount );
+        //alert('bgimages/'+num+'.jpg')
+        //document.body.background = 'bgimages/'+num+'.jpg';
+        //document.body.style.backgroundRepeat = "repeat";// Background repeat
+
+            var Joke = [
+                'Thinking of you and counting the days until we meet again is the best feeling in the world.',
+                'I hate waiting. But if waiting means being able to be with you, I’ll wait for as long as forever to be with you',
+                'I have to be honest with you. I think about you a lot all the time, actually. In the morning, at night, in the middle of my day. It’s you. It’s just always you.',
+                'The longer you wait for something. The more you appreciate it when you get it. Because anything worth having is always worth the wait.',
+                'Long distance relationships are hard but they’re also incredible. If two people can love, respect, trust, and understand each other from a distance, nothing can break them apart.',
+                'Finally the day came when we will meet...'
+            ];
+            var Pick = Math.floor(Math.random() * (Joke.length));
+
+            var Element = document.getElementById("countdown");
+            Element.style.color = "orange";
+            Element.innerHTML = Joke[Pick];
+        }
+    </script>
+</body>
+</html>
