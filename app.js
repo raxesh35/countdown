@@ -7,6 +7,8 @@ const secondEl = document.querySelector('.seconds');
 
 function timeCountDown() {
   const nowDate = new Date();
+  nowDate.setDate(nowDate.getDate() - 1); // subtract 5 days
+
   const newYearDate = new Date(newYear);
   const totalSeconds = (newYearDate - nowDate) / 1000;
 
@@ -22,7 +24,7 @@ function timeCountDown() {
 }
 
 function formatTime(time) {
-  return time > 10 ? time : `0${time}`;
+  return time > 9 ? time : `0${time}`;
 }
 
 timeCountDown()
